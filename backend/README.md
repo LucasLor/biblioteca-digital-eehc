@@ -29,6 +29,6 @@ Para o servidor reiniciar sozinho quando você salvar um arquivo, use `npm run d
 ## Arquivos
 
 - `server.js` - arquivo principal, liga o servidor
-- `database.js` - conexão com o banco de dados
-- `home.mjs` - código da página inicial
-- `livro.mjs` - código dos livros
+- `src/database.js` - conexão com o banco de dados
+- `src/home.mjs` - código da página inicial
+- `src/livro.mjs` - código dos livros
