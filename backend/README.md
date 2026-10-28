@@ -29,7 +29,8 @@ Para o servidor reiniciar sozinho quando você salvar um arquivo, use `npm run d
 ## Arquivos
 
 - `server.js` - arquivo principal, liga o servidor
-- `src/database.js` - conexão com o banco de dados
+- `src/database.js` - conexão com o banco de dados SQLite (cria o arquivo `biblioteca.db` sozinho)
 - `src/home.mjs` - código da página inicial
 - `src/livro.mjs` - código dos livros
 - `src/exemplos.mjs` - exemplos de query param, body, resposta em texto e em JSON
+- `src/exemplos-banco.mjs` - exemplos de criar, listar, buscar, atualizar e apagar no banco

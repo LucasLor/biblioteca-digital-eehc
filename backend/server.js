@@ -5,6 +5,7 @@ import express from "express";
 import homeRouter from "./src/home.mjs";
 import livroRouter from "./src/livro.mjs";
 import exemplosRouter from "./src/exemplos.mjs";
+import exemplosBancoRouter from "./src/exemplos-banco.mjs";
 
 const app = express();
 const PORTA = 3000;
@@ -16,6 +17,7 @@ app.use(express.json());
 app.use("/", homeRouter);
 app.use("/livros", livroRouter);
 app.use("/exemplos", exemplosRouter);
+app.use("/exemplos-banco", exemplosBancoRouter);
 
 // Liga o servidor
 app.listen(PORTA, () => {
