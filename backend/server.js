@@ -2,6 +2,8 @@
 // Para iniciar: npm start
 
 import express from "express";
+import homeRouter from "./src/home.mjs";
+import livroRouter from "./src/livro.mjs";
 
 const app = express();
 const PORTA = 3000;
@@ -9,10 +11,9 @@ const PORTA = 3000;
 // Permite que a API entenda dados enviados em formato JSON
 app.use(express.json());
 
-// Rota de teste: abra http://localhost:3000 no navegador
-app.get("/", (req, res) => {
-  res.json({ mensagem: "API da Biblioteca Digital EEHC funcionando!" });
-});
+// Rotas da API
+app.use("/", homeRouter);
+app.use("/livros", livroRouter);
 
 // Liga o servidor
 app.listen(PORTA, () => {
