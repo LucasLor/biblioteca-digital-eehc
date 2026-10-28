@@ -1,0 +1,34 @@
+# Backend - Biblioteca Digital EEHC
+
+API feita com Node.js e Express.
+
+## Como rodar
+
+1. Entre na pasta do backend:
+
+   ```
+   cd backend
+   ```
+
+2. Instale as dependências (só na primeira vez):
+
+   ```
+   npm install
+   ```
+
+3. Inicie o servidor:
+
+   ```
+   npm start
+   ```
+
+4. Abra no navegador: http://localhost:3000
+
+Para o servidor reiniciar sozinho quando você salvar um arquivo, use `npm run dev`.
+
+## Arquivos
+
+- `server.js` - arquivo principal, liga o servidor
+- `database.js` - conexão com o banco de dados
+- `home.mjs` - código da página inicial
+- `livro.mjs` - código dos livros

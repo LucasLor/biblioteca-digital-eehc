@@ -1,0 +1,14 @@
+{
+  "name": "biblioteca-digital-eehc-backend",
+  "version": "1.0.0",
+  "description": "API da Biblioteca Digital EEHC feita com Node.js e Express",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
