@@ -1,0 +1,37 @@
+// Exemplos de como receber dados e enviar respostas.
+
+import express from "express";
+
+const router = express.Router();
+
+// Exemplo 1: receber QUERY PARAM (dados que vêm na URL, depois do "?")
+// Teste no navegador: http://localhost:3000/exemplos/busca?titulo=Dom Casmurro
+router.get("/busca", (req, res) => {
+  const titulo = req.query.titulo;
+
+  res.json({ mensagem: "Você buscou pelo título:", titulo: titulo });
+});
+
+// Exemplo 2: receber BODY (dados que vêm dentro da requisição, em JSON)
+// Teste com curl:
+// curl -X POST http://localhost:3000/exemplos/body -H "Content-Type: application/json" -d '{"titulo":"Dom Casmurro","autor":"Machado de Assis"}'
+router.post("/body", (req, res) => {
+  const titulo = req.body.titulo;
+  const autor = req.body.autor;
+
+  res.json({ mensagem: "Livro recebido!", titulo: titulo, autor: autor });
+});
+
+// Exemplo 3: responder com TEXTO simples
+// Teste no navegador: http://localhost:3000/exemplos/texto
+router.get("/texto", (req, res) => {
+  res.send("Isso é uma resposta em texto!");
+});
+
+// Exemplo 4: responder com JSON (já usado nas rotas acima)
+// Teste no navegador: http://localhost:3000/exemplos/json
+router.get("/json", (req, res) => {
+  res.json({ resposta: "Isso é uma resposta em JSON!" });
+});
+
+export default router;

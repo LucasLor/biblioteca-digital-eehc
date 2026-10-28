@@ -4,6 +4,7 @@
 import express from "express";
 import homeRouter from "./src/home.mjs";
 import livroRouter from "./src/livro.mjs";
+import exemplosRouter from "./src/exemplos.mjs";
 
 const app = express();
 const PORTA = 3000;
@@ -14,6 +15,7 @@ app.use(express.json());
 // Rotas da API
 app.use("/", homeRouter);
 app.use("/livros", livroRouter);
+app.use("/exemplos", exemplosRouter);
 
 // Liga o servidor
 app.listen(PORTA, () => {
