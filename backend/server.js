@@ -15,9 +15,7 @@ app.use(express.json());
 
 // Rotas da API
 app.use("/", homeRouter);
-app.use("/livros", livroRouter);
-app.use("/exemplos", exemplosRouter);
-app.use("/exemplos-banco", exemplosBancoRouter);
+
 
 // Liga o servidor
 app.listen(PORTA, () => {

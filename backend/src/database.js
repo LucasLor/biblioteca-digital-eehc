@@ -23,6 +23,22 @@ db.exec(`
   )
 `);
 
+const colunasLivros = new Set(db.pragma("table_info(livros)").map(({ name }) => name));
+const colunasAusentes = {
+  descricao: "TEXT",
+  imagem: "TEXT NOT NULL DEFAULT ''",
+  paginas: "TEXT NOT NULL DEFAULT ''",
+  status: "TEXT NOT NULL DEFAULT 'disponivel'",
+  datadepublicacao: "DATE",
+  sinopse: "TEXT",
+};
+
+for (const [coluna, definicao] of Object.entries(colunasAusentes)) {
+  if (!colunasLivros.has(coluna)) {
+    db.exec(`ALTER TABLE livros ADD COLUMN ${coluna} ${definicao}`);
+  }
+}
+
 db.exec(`
   CREATE TABLE IF NOT EXISTS genero (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -66,4 +82,3 @@ db.exec(`
 `);
 
 export default db;
-
