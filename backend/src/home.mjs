@@ -54,4 +54,7 @@ let query = "SELECT * FROM livros  ";
 });
 
 
+
+
+
 export default router;
