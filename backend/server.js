@@ -8,6 +8,7 @@ import livroRouter from "./src/livro.mjs";
 import exemplosRouter from "./src/exemplos.mjs";
 import exemplosBancoRouter from "./src/exemplos-banco.mjs";
 import indicacaoRouter from "./src/indicacao.mjs";
+import colecaoRouter from "./src/colecao.js";
 const app = express();
 const PORTA = 3000;
 
@@ -21,6 +22,7 @@ app.use(express.static(path.join(import.meta.dirname, "..", "novo front end")));
 app.use("/", homeRouter);
 app.use("/indicacoes", indicacaoRouter);
 app.use("/livros", livroRouter);
+app.use("/colecoes", colecaoRouter);
 
 
 // Liga o servidor
