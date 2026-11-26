@@ -4,6 +4,8 @@ API feita com Node.js e Express.
 
 ## Como rodar
 
+Use Node.js 22 LTS. Versões mais novas, como o Node.js 24, podem exigir ferramentas de compilação do Windows para instalar o `better-sqlite3`.
+
 1. Entre na pasta do backend:
 
    ```
