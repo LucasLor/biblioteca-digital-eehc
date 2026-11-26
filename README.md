@@ -4,7 +4,7 @@ Projeto de ensino: uma biblioteca digital com API feita em Node.js.
 
 ## Como iniciar a API
 
-Você precisa ter o [Node.js](https://nodejs.org) instalado.
+Você precisa ter o Node.js 22 LTS instalado. O `better-sqlite3` usado pelo projeto não possui versão pré-compilada compatível com o Node.js 24 no ambiente atual.
 
 1. Entre na pasta do backend:
 
